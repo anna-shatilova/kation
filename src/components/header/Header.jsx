@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import "./styles/header.css";
-import { PopupNavMenu } from "../popup-nav-menu/PopupNavMenu";
-import { useState } from "react";
+import { Link } from 'react-router-dom';
+import './styles/header.css';
+import { PopupNavMenu } from '../popup-nav-menu/PopupNavMenu';
+import { useState } from 'react';
 
 export const Header = () => {
   const [isNavMenuOpen, setIsNavMenuOpen] = useState(false);
