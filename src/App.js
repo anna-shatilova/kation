@@ -1,10 +1,13 @@
 import './App.css';
 import { Header } from './components/header/Header';
+import { Mainpage } from './pages/mainpage/mainpage';
 
 function App() {
   return (
     <div className="App">
-      {/* <Header /> */}
+      <Header />
+      <Mainpage>
+      </Mainpage>
     </div>
   );
 }
