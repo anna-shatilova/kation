@@ -1,7 +1,11 @@
+// @import "../../../utilities/colors/colors";
+@import "utilities/colors";
+
 .header {
   width: 100%;
   height: 100px;
-  background-color: #116466;
+  // background-color: #116466;
+  background-color: $colorOfMainHeader;
   display: flex;
   justify-content: space-around;
   align-items: center;
