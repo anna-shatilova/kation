@@ -6,6 +6,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export const Header = () => {
   const [isPopupMenuOpen, setIsPopupMenuOpen] = useState(false);
+  const [isHoverOnPopup, setIsHoverOnPopup] = useState(false);
 
   return (
     <header className="header">
@@ -23,7 +24,9 @@ export const Header = () => {
           Услуги
           <ExpandMoreIcon sx={{ width: '15px', margin: '0.05em' }} />
         </Link>
-        {isPopupMenuOpen && <PopupNavMenu />}
+        {(isPopupMenuOpen || isHoverOnPopup) && (
+          <PopupNavMenu setIsHoverOnPopup={setIsHoverOnPopup} />
+        )}
         <Link to="/" className="nav__link">
           Галерея
         </Link>
