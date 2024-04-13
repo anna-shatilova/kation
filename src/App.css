@@ -4,34 +4,3 @@
     height: 2000px;
 }
 
-.feedback-btn {
-  align-items: center;
-  appearance: none;
-  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #75E6C8 100%);
-  border: 0;
-  border-radius: 6px;
-  box-sizing: border-box;
-  color: #2C3531;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  font-size: 18px;
-}
-
-.feedback-btn:hover {
-  font-weight: bold;
-}

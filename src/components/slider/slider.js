@@ -1,10 +1,11 @@
 import sample from './../../videoplayback/IMG_1209.MP4';
+import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 import './slider.css'
 
 
   export const Slider = () => {
 
-    let arrow = "------>"
+    // let arrow = "------>"
 
     return (
           <div className='container'>
@@ -15,7 +16,8 @@ import './slider.css'
                 <h1>ГАЛЬВАНИЧЕСКОЕ ПОКРЫТИЕ <br></br>
                 ОТ 49 РУБ ЗА ДМ2</h1>
                 <p>Нанесем покрытие. Проведем шлифовку, наплавку, полировку и гарцовку. Проконсультируем бесплатно.</p>
-                <a>Заказать консультацию {arrow}</a>
+                {/* <a>Заказать консультацию {arrow}</a> */}
+                <a>Заказать консультацию <TrendingFlatIcon style={{fontSize: 'Small'}}/></a>
               </div>
           </div>
     )

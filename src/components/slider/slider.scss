@@ -22,8 +22,8 @@
 }
 
 .overlay-elements {
-    // background-image: linear-gradient(to bottom right,#002f4b,#899D9D);
-    // opacity: .8;
+    background-image: linear-gradient(to bottom right, $colorOfSilver, $background);
+    opacity: .83;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -36,10 +36,14 @@
     line-height: 1.5;
     text-align: center;
     :last-child { margin-bottom: 0; }
-    h1 {font-size: 32pt; font-weight: bold; text-shadow: 0 0 .3em $background; }
-    p {font-size: 16pt;text-shadow: 0 0 .3em $background;margin: 1em 0;}
-    a {font-size: 16px; line-height: 19px; color: $primaryWindowColor; font-weight: bold;}
+
+    h1 {font-size: 32pt; font-weight: bold; text-shadow: 0 0 .3em $background; opacity: 1}
+    p {font-size: 16pt;text-shadow: 0 0 .3em $background;margin: 1em 0; opacity: 1}
+    a {font-size: 16px; line-height: 19px; color: $primaryWindowColor; font-weight: bold; opacity: 1; cursor: pointer}
+
 }
+
+
   
   code { font-family: monospace; }
   body { 
