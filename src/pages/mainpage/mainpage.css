@@ -3,6 +3,7 @@
 }
 
 .main-content {
+  margin-top: 1000px;
   padding-left: calc(50% - 400px);
   padding-right: calc(50% - 400px);
 }
@@ -75,5 +76,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.animate__animated.animate__bounce {
+  --animate-duration: 0.2s;
 }
 /*# sourceMappingURL=mainpage.css.map */
