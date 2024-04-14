@@ -7,6 +7,7 @@ import pic1 from './../../img/shutterstock_1536927203.jpg'
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ServiceList } from "../../components/serviceList/serviceList";
+import { Carousel } from "../../components/carousel/carousel";
 import "./mainpage.css"
 
 
@@ -53,6 +54,12 @@ export const Mainpage = () => {
                     </AnimationOnScroll>
                 </div>
                     <ServiceList/>
+                <div className="gallery">
+                <h1>ГАЛЕРЕЯ</h1>
+                    <AnimationOnScroll animateIn="animate__bounceInRight" duration={2}>
+                        <Carousel/>
+                    </AnimationOnScroll>
+                </div>
             </div>
         </div>
     )
