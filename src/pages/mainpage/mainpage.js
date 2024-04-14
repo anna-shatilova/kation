@@ -6,6 +6,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import pic1 from './../../img/shutterstock_1536927203.jpg'
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { ServiceList } from "../../components/serviceList/serviceList";
 import "./mainpage.css"
 
 
@@ -22,9 +23,10 @@ export const Mainpage = () => {
                             <div className="item a">
                                 <AssignmentIcon style={{fontSize: "XXX-Large"}}/>
                                 <div className="item-description">Возможность покры-<br/>
-                                тий по техническому<br/>
-                                заданию заказчика<br/>
-                                сложных конструкций</div>
+                                тия сложных<br/>
+                                конструкций<br/>
+                                по техническому<br/>
+                                заданию заказчика</div>
                             </div>
                             <div className="item b">
                                 <LocalOfferIcon style={{fontSize: "XXX-Large"}}/>
@@ -50,6 +52,7 @@ export const Mainpage = () => {
                         </div>
                     </AnimationOnScroll>
                 </div>
+                    <ServiceList/>
             </div>
         </div>
     )
