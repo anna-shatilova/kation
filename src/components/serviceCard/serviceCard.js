@@ -1,3 +1,4 @@
+import { Button } from '../button/button'
 import './serviceCard.css'
 
 export const ServiceCard = ({color, name, descr}) => {
@@ -8,7 +9,8 @@ export const ServiceCard = ({color, name, descr}) => {
                 <h4>{name}</h4>
             </div>
             <div className='description'>{descr}</div>
-            <button className='btn'>Подробнее</button>
+            {/* <button className='btn'>Подробнее</button> */}
+            <Button/>
         </div>
     )
 }

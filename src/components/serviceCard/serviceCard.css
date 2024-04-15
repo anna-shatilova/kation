@@ -49,24 +49,4 @@ h4 {
   margin-left: 16px;
   margin-top: 10px;
 }
-
-.btn {
-  width: 145px;
-  height: 45px;
-  color: #AFEEEE;
-  border: 2px #AFEEEE solid;
-  background-color: #2C3531;
-  font-size: 16px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  justify-self: flex-end;
-  margin-top: 100px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  color: #8EAFAF;
-  border: 2px #8EAFAF solid;
-}
 /*# sourceMappingURL=serviceCard.css.map */

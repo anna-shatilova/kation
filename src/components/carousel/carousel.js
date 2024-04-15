@@ -37,7 +37,7 @@ const images = [
   },
 ];
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
       maxWidth: 1000,
       flexGrow: 1
