@@ -7,11 +7,11 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-import { makeStyles } from '@material-ui/styles';
+// import SwipeableViews from 'react-swipeable-views';
+// import { autoPlay } from 'react-swipeable-views-utils';
+// import { makeStyles } from '@material-ui/styles';
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+// const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 
 const images = [
@@ -37,24 +37,24 @@ const images = [
   },
 ];
 
-const useStyles = makeStyles(() => ({
-    root: {
-      maxWidth: 1000,
-      flexGrow: 1
-    },
-    dot: {
-      '&.MuiMobileStepper-dot': {
-        backgroundColor: '#899D9D',
-      },
-      '&.MuiMobileStepper-dotActive': {
-        backgroundColor: '#2C3531',
-      }
-    }
-  }));
+// const useStyles = makeStyles(() => ({
+//     root: {
+//       maxWidth: 1000,
+//       flexGrow: 1
+//     },
+//     dot: {
+//       '&.MuiMobileStepper-dot': {
+//         backgroundColor: '#899D9D',
+//       },
+//       '&.MuiMobileStepper-dotActive': {
+//         backgroundColor: '#2C3531',
+//       }
+//     }
+//   }));
 
 export const Carousel = () => {
 
-const classes = useStyles();
+// const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images.length;
@@ -87,7 +87,7 @@ const classes = useStyles();
       >
         <Typography>{images[activeStep].label}</Typography>
       </Paper>
-      <AutoPlaySwipeableViews
+      {/* <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
         onChangeIndex={handleStepChange}
@@ -111,19 +111,19 @@ const classes = useStyles();
             ) : null}
           </div>
         ))}
-      </AutoPlaySwipeableViews>
+      </AutoPlaySwipeableViews> */}
       <MobileStepper
         // style={{fill: "#116466"}}
-        className={classes.root} 
+        // className={classes.root} 
         variant="dots"
         steps={maxSteps}
         position="static"
         activeStep={activeStep}
-        classes={{
-            root: classes.root,
-            dot: classes.dot,
-            dotActive: classes.dotActive
-          }}
+        // classes={{
+        //     root: classes.root,
+        //     dot: classes.dot,
+        //     dotActive: classes.dotActive
+        //   }}
         nextButton={
           <Button
             size="small"
