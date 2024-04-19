@@ -1,4 +1,3 @@
-import { ThemeProvider } from '@emotion/react';
 import {
   Breadcrumbs,
   Button,
@@ -11,7 +10,6 @@ import {
   Grid,
   Link,
   Typography,
-  createTheme,
 } from '@mui/material';
 
 const galleryFoto = [
@@ -48,56 +46,43 @@ const galleryFoto = [
 ];
 
 export const Gallery = () => {
-  const theme = createTheme({
-    typography: {
-      fontFamily: ['Lato', 'sans-serif'].join(','),
-    },
-  });
-
   return (
-    <ThemeProvider theme={theme}>
-      <Container sx={{ mt: 2 }}>
-        <Breadcrumbs separator="›" aria-label="breadcrumb" sx={{ mb: 2 }}>
-          <Link underline="hover" color="inherit" href="/">
-            Главная
-          </Link>
-          <Typography color="inherit">Галерея</Typography>
-        </Breadcrumbs>
-        <Typography variant="h2" color="inherit" sx={{ mb: 2 }}>
-          Галерея
-        </Typography>
-        <Grid container spacing={2}>
-          {galleryFoto.map((elem) => (
-            <Grid key={elem.id} item xs={12} md={3}>
-              <Card sx={{ height: '100%' }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={elem.url}
-                    alt="foto"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {elem.name}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Button
-                    size="small"
-                    underline="hover"
-                    color="inherit"
-                    href="/"
-                  >
-                    Подробнее
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </ThemeProvider>
+    <Container sx={{ mt: 2 }}>
+      <Breadcrumbs separator="›" aria-label="breadcrumb" sx={{ mb: 2 }}>
+        <Link underline="hover" color="inherit" href="/">
+          Главная
+        </Link>
+        <Typography color="inherit">Галерея</Typography>
+      </Breadcrumbs>
+      <Typography variant="h2" color="inherit" sx={{ mb: 2 }}>
+        Галерея
+      </Typography>
+      <Grid container spacing={2}>
+        {galleryFoto.map((elem) => (
+          <Grid key={elem.id} item xs={12} md={3}>
+            <Card sx={{ height: '100%' }}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={elem.url}
+                  alt="foto"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {elem.name}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" underline="hover" color="inherit" href="/">
+                  Подробнее
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
   );
 };

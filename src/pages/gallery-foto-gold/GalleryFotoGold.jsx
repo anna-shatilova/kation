@@ -1,4 +1,3 @@
-import { ThemeProvider } from '@emotion/react';
 import {
   Breadcrumbs,
   Container,
@@ -6,7 +5,6 @@ import {
   ImageListItem,
   Link,
   Typography,
-  createTheme,
 } from '@mui/material';
 
 const itemData = [
@@ -45,40 +43,32 @@ const itemData = [
 ];
 
 export const GalleryFotoGold = () => {
-  const theme = createTheme({
-    typography: {
-      fontFamily: ['Lato', 'sans-serif'].join(','),
-    },
-  });
-
   return (
-    <ThemeProvider theme={theme}>
-      <Container sx={{ mt: 2 }}>
-        <Breadcrumbs separator="›" aria-label="breadcrumb" sx={{ mb: 2 }}>
-          <Link underline="hover" color="inherit" href="/">
-            Главная
-          </Link>
-          <Link underline="hover" color="inherit" href="/">
-            Галерея
-          </Link>
-          <Typography color="inherit">Фото работ по золочению</Typography>
-        </Breadcrumbs>
-        <Typography variant="h2" color="inherit" sx={{ mb: 2 }}>
-          Фото работ по золочению
-        </Typography>
-        <ImageList sx={{ height: 450 }} cols={4}  gap={20}>
-          {itemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <img
-                srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                alt={item.title}
-                loading="lazy"
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </Container>
-    </ThemeProvider>
+    <Container sx={{ mt: 2 }}>
+      <Breadcrumbs separator="›" aria-label="breadcrumb" sx={{ mb: 2 }}>
+        <Link underline="hover" color="inherit" href="/">
+          Главная
+        </Link>
+        <Link underline="hover" color="inherit" href="/">
+          Галерея
+        </Link>
+        <Typography color="inherit">Фото работ по золочению</Typography>
+      </Breadcrumbs>
+      <Typography variant="h2" color="inherit" sx={{ mb: 2 }}>
+        Фото работ по золочению
+      </Typography>
+      <ImageList sx={{ height: 450 }} cols={4} gap={20}>
+        {itemData.map((item) => (
+          <ImageListItem key={item.img}>
+            <img
+              srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+              alt={item.title}
+              loading="lazy"
+            />
+          </ImageListItem>
+        ))}
+      </ImageList>
+    </Container>
   );
 };
