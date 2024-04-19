@@ -1,0 +1,13 @@
+@import './../../../utilities/_colors/colors';
+
+.card {
+    border: 1px $shadeBorder solid;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px #ccc;
+  }
+  
