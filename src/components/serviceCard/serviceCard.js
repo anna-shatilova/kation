@@ -1,10 +1,10 @@
 import { Button } from '../button/button'
 import './serviceCard.css'
 
-export const ServiceCard = ({color, name, descr}) => {
+export const ServiceCard = ({background, name, descr}) => {
     return (
         <div className='cardBox'>
-            <div className='material' style={{background: color}}></div>
+            <div className='material' style={{background: background}}></div>
             <div className='material-header'>
                 <h4>{name}</h4>
             </div>

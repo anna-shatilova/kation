@@ -1,6 +1,5 @@
 .cardBox {
   width: 255px;
-  height: 492px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

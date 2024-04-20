@@ -1,17 +1,19 @@
 import {
   Breadcrumbs,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
+  // Card,
+  // CardActionArea,
+  // CardActions,
+  // CardContent,
+  // CardMedia,
   Container,
-  Grid,
+  // Grid,
   Link,
   Typography,
 } from '@mui/material';
-import { Button } from '../../components/button/button';
+// import { Button } from '../../components/button/button';
 import './styles/gallery.css';
+// import { serviceGallery } from '../../utilities/serviceGallery';
+import { ServiceList } from '../../components/serviceList/serviceList';
 import { serviceGallery } from '../../utilities/serviceGallery';
 
 export const Gallery = () => {
@@ -23,10 +25,11 @@ export const Gallery = () => {
         </Link>
         <Typography color="inherit">Галерея</Typography>
       </Breadcrumbs>
-      <Typography variant="h1" color="inherit" sx={{ mb: 2 }}>
+      {/* <Typography variant="h1" color="inherit" sx={{ mb: 2 }}>
         Галерея
-      </Typography>
-      <Grid container spacing={2}>
+      </Typography> */}
+      <ServiceList heading={'ГАЛЕРЕЯ'} array={serviceGallery} />
+      {/* <Grid container spacing={2}>
         {serviceGallery.map((elem) => (
           <Grid key={elem.id} item xs={12} md={3}>
             <div className="card">
@@ -61,7 +64,7 @@ export const Gallery = () => {
             </div>
           </Grid>
         ))}
-      </Grid>
+      </Grid> */}
     </Container>
   );
 };

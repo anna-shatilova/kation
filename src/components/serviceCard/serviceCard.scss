@@ -2,7 +2,7 @@
 
 .cardBox {
   width: 255px;
-  height: 492px;
+  // height: 492px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -12,6 +12,7 @@
   border: 1px $shadeBorder solid;
   border-radius: 2px;
   transition: all 0.3s;
+  // padding-bottom: 10px;
 }
 
 .cardBox:hover {

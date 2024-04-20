@@ -27,7 +27,7 @@ export const Header = () => {
         {(isPopupMenuOpen || isHoverOnPopup) && (
           <PopupNavMenu setIsHoverOnPopup={setIsHoverOnPopup} />
         )}
-        <Link to="/" className="nav__link">
+        <Link to="/gallery" className="nav__link">
           Галерея
         </Link>
         <Link to="/" className="nav__link">

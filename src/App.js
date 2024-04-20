@@ -7,7 +7,7 @@ import { theme } from './styles/material-ui/themeMui';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <ThemeProvider theme={theme}>
         <Header />
         <AppRoutes>
