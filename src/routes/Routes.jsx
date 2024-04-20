@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Mainpage } from '../pages/mainpage/mainpage';
 import { GalleryFotoGold } from '../pages/gallery-foto-gold/GalleryFotoGold';
 import { NotFound } from '../pages/NotFound/NotFound';
-import { Gallery } from '../pages/gallery/gallery';
+import { Gallery } from '../pages/gallery/Gallery';
 
 export const AppRoutes = () => {
   return (

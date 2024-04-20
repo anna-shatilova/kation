@@ -16,7 +16,7 @@ import { serviceGallery } from '../../utilities/serviceGallery';
 
 export const Gallery = () => {
   return (
-    <Container sx={{ mt: 2, bgcolor: 'background.wrap' }}>
+    <Container sx={{ bgcolor: 'background.wrap', width: '100%' }}>
       <Breadcrumbs separator="›" aria-label="breadcrumb" sx={{ pt: 2 }}>
         <Link underline="hover" color="inherit" href="/">
           Главная
