@@ -1,19 +1,19 @@
 import { AppRoutes } from './routes/Routes';
 import { Header } from './components/header/Header';
-// import { GalleryFotoGold } from './pages/gallery-foto-gold/GalleryFotoGold';
-// import { Gallery } from './pages/gallery/gallery';
 import { Mainpage } from './pages/mainpage/mainpage';
-import './App.css';
+import './styles/App.css';
+import { ThemeProvider } from '@mui/material';
+import { theme } from './styles/material-ui/themeMui';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <AppRoutes>
-        <Mainpage/>
-        {/* <Gallery /> */}
-        {/* <GalleryFotoGold /> */}
-      </AppRoutes>
+    <div>
+      <ThemeProvider theme={theme}>
+        <Header />
+        <AppRoutes>
+          <Mainpage />
+        </AppRoutes>
+      </ThemeProvider>
     </div>
   );
 }
