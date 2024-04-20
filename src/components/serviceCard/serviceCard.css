@@ -9,6 +9,7 @@
   border: 1px #0B191A solid;
   border-radius: 2px;
   transition: all 0.3s;
+  padding-bottom: 10px;
 }
 
 .cardBox:hover {
