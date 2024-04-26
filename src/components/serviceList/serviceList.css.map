@@ -1,1 +1,1 @@
-{"version":3,"sources":["serviceList.scss","../../utilities/_colors/_colors.scss","serviceList.css"],"names":[],"mappings":"AAEA;EAEI,WAAA;EACA,cAAA;EACA,yBCLY;ACGhB;;AFOA;EACI,aAAA;EACA,oDAAA;EACA,SAAA;EACA,uBAAA;AEJJ;;AFOA;EACI,kBAAA;AEJJ;;AFOA;EACI,iBAAA;AEJJ","file":"serviceList.css"}
+{"version":3,"sources":["serviceList.scss","serviceList.css"],"names":[],"mappings":"AAEA;EAEI,WAAA;EACA,cAAA;EACA,yBANY;ACIhB;;ADOA;EACI,aAAA;EACA,oDAAA;EACA,SAAA;EACA,uBAAA;ACJJ;;ADOA;EACI,kBAAA;ACJJ;;ADOA;EACI,iBAAA;ACJJ","file":"serviceList.css"}
