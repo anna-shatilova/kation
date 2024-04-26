@@ -1,20 +1,23 @@
 import { AppRoutes } from './routes/Routes';
 import { Header } from './components/header/Header';
 import { Mainpage } from './pages/mainpage/mainpage';
-import './styles/App.css';
-import { ThemeProvider } from '@mui/material';
-import { theme } from './styles/material-ui/themeMui';
+import { Footer } from './components/footer/Footer';
+import { Container, GlobalStyles, WrapGreen } from './App.styles';
 
 function App() {
   return (
-    <div>
-      <ThemeProvider theme={theme}>
-        <Header />
-        <AppRoutes>
-          <Mainpage />
-        </AppRoutes>
-      </ThemeProvider>
-    </div>
+    <>
+      <GlobalStyles />
+      <WrapGreen>
+        <Container>
+          <Header />
+          <AppRoutes>
+            <Mainpage />
+          </AppRoutes>
+          <Footer />
+        </Container>
+      </WrapGreen>
+    </>
   );
 }
 

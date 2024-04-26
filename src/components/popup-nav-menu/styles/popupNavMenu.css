@@ -16,7 +16,7 @@
   background-color: #fff;
 }
 .popup-menu::-webkit-scrollbar-thumb {
-  background-color: #437C7E;
+  background-color: #437c7e;
 }
 
 .menu-list {
@@ -33,6 +33,6 @@
 }
 .menu-list li a:hover,
 .menu-list li a:active {
-  color: #437C7E;
+  color: #437c7e;
   text-decoration: underline;
 }/*# sourceMappingURL=popupNavMenu.css.map */
