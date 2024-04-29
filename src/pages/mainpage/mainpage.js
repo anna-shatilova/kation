@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 import { Slider } from '../../components/slider/slider';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
@@ -12,12 +12,6 @@ import './mainpage.css';
 import { Services } from '../../utilities/serivice';
 
 export const Mainpage = () => {
-
-  const [hasAnimated, setHasAnimated] = useState(false);
-
-  const handleAnimationEnd = () => {
-        setHasAnimated(true);
-      };
 
   const renderPros = () => {
     return (
@@ -93,8 +87,7 @@ export const Mainpage = () => {
         <div className="main-content">
           <h1 className="head">ПРЕИМУЩЕСТВА</h1>
           <div>
-            {!hasAnimated && renderAnimatedPros()}
-            {hasAnimated && renderPros()}
+            {renderAnimatedPros()}
           </div>
         </div>
         <ServiceList heading={'УСЛУГИ'} array={Services} />

@@ -1,14 +1,9 @@
-import { useState } from 'react';
+
 import { ServiceCard } from '../serviceCard/serviceCard';
 import 'animate.css/animate.min.css';
 import './serviceList.css';
 
 export const ServiceList = ({ heading, array }) => {
-  const [hasAnimated, setHasAnimated] = useState(false);
-
-  const handleAnimationEnd = () => {
-    setHasAnimated(true);
-  };
 
   const renderServiceCards = () => {
     return array.map((card, index) => (
@@ -27,13 +22,12 @@ export const ServiceList = ({ heading, array }) => {
       <div className="headerWrapper">
         <h1>{heading}</h1>
       </div>
-      {!hasAnimated && (
+      {
         <div className='AnimationOnScrollLeft'
         >
           <div className="cardsWrapper">{renderServiceCards()}</div>
         </div>
-      )}
-      {hasAnimated && <div className="cardsWrapper">{renderServiceCards()}</div>}
+      }
     </div>
   );
 };
