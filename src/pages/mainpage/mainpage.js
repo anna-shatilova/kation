@@ -10,6 +10,7 @@ import { ServiceList } from '../../components/serviceList/serviceList';
 import { Carousel } from '../../components/carousel/carousel';
 import './mainpage.css';
 import { Services } from '../../utilities/serivice';
+import {images} from '../../utilities/carouselImg'
 
 export const Mainpage = () => {
 
@@ -94,7 +95,7 @@ export const Mainpage = () => {
          <div className="gallery">
            <h1>ГАЛЕРЕЯ</h1>
            <div className='AnimationOnScrollRight'>
-             <Carousel />
+             <Carousel images={images} />
              </div>
          </div>
       </div>

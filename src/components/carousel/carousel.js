@@ -1,31 +1,66 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import './carousel.css'
 
 
+export const Carousel = ({images}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-const images = [
-  {
-    label: 'Никелирование',
-    imgPath:
-      'https://ekb.hrom-prom.ru//wp-content/uploads/sites/5/2016/02/%D0%9D%D0%B8%D0%BA%D0%B5%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5.jpg',
-  },
-  {
-    label: 'Хромирование',
-    imgPath:
-      'https://prom-met.ru/images/Main/hrm.jpg',
-  },
-  {
-    label: 'Золочение',
-    imgPath:
-      'https://avatars.dzeninfra.ru/get-zen_doc/1668923/pub_5cadff77ee4f6d00b268e7f7_5cadff8f06ced300b29048f6/scale_1200'
-  },
-  {
-    label: 'Оловянирование',
-    imgPath:
-      'https://www.elhim-doc.ru/images/olov2.jpg'
-  },
-];
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 1 === images.length ? 0 : prevIndex + 1
+    );
+  };
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+  const handleDotClick = (index) => {
+    setCurrentIndex(index);
+  };
 
+  
+  return (
+    <div>
+    <div className="carousel-images">
+    <img
+      key={currentIndex}
+      src={images[currentIndex]}
+    /><div className="slide_direction">
+    <div className="left" onClick={handlePrevious}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="20"
+        viewBox="0 96 960 960"
+        width="20"
+      >
+        <path d="M400 976 0 576l400-400 56 57-343 343 343 343-56 57Z" />
+      </svg>
+    </div>
+    <div className="right" onClick={handleNext}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="20"
+        viewBox="0 96 960 960"
+        width="20"
+      >
+        <path d="m304 974-56-57 343-343-343-343 56-57 400 400-400 400Z" />
+      </svg>
+    </div>
+  </div>
 
-export const Carousel = () => {
-  <div></div>
+</div>
+  <div className="carousel-indicator">
+  {images.map((_, index) => (
+    <div
+      key={index}
+      className={`dot ${currentIndex === index ? "active" : ""}`}
+      onClick={() => handleDotClick(index)}
+    ></div>
+  ))}
+</div>
+</div>
+  )
 }
 
