@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { ServiceCard } from '../serviceCard/serviceCard';
 import 'animate.css/animate.min.css';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
 import './serviceList.css';
 
 export const ServiceList = ({ heading, array }) => {
@@ -29,13 +28,10 @@ export const ServiceList = ({ heading, array }) => {
         <h1>{heading}</h1>
       </div>
       {!hasAnimated && (
-        <AnimationOnScroll
-          animateIn="animate__bounceInLeft"
-          duration={2}
-          afterAnimatedIn={handleAnimationEnd}
+        <div className='AnimationOnScrollLeft'
         >
           <div className="cardsWrapper">{renderServiceCards()}</div>
-        </AnimationOnScroll>
+        </div>
       )}
       {hasAnimated && <div className="cardsWrapper">{renderServiceCards()}</div>}
     </div>

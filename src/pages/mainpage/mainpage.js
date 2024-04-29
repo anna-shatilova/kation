@@ -6,7 +6,6 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import WorkIcon from '@mui/icons-material/Work';
 import pic1 from './../../img/shutterstock_1536927203.jpg';
 import 'animate.css/animate.min.css';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ServiceList } from '../../components/serviceList/serviceList';
 import { Carousel } from '../../components/carousel/carousel';
 import './mainpage.css';
@@ -82,13 +81,7 @@ export const Mainpage = () => {
   const renderAnimatedPros = () => {
     return (
       <div>
-        <AnimationOnScroll
-          animateIn="animate__bounceInRight"
-          duration={2}
-          afterAnimatedIn={handleAnimationEnd}
-        >
-          <div>{renderPros()}</div>
-        </AnimationOnScroll>
+          <div className='AnimationOnScrollRight'>{renderPros()}</div>
       </div>
     );
   };
@@ -107,9 +100,9 @@ export const Mainpage = () => {
         <ServiceList heading={'УСЛУГИ'} array={Services} />
          <div className="gallery">
            <h1>ГАЛЕРЕЯ</h1>
-           <AnimationOnScroll animateIn="animate__bounceInRight" duration={2}>
+           <div className='AnimationOnScrollRight'>
              <Carousel />
-           </AnimationOnScroll>
+             </div>
          </div>
       </div>
     </div>
