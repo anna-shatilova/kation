@@ -49,6 +49,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   gap: 5px;
+  padding-top: 3px;
 }
 
 .dot {
