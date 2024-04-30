@@ -1,16 +1,21 @@
+
+import { useState } from 'react';
 import { ButtonWithBorder } from '../../App.styles';
-// import { Button } from '../button/button'
 import './serviceCard.css';
 
-export const ServiceCard = ({ background, backgroundImg, name, descr }) => {
+export const ServiceCard = ({ background, backgroundImg, name, descr, isHovered, setIsHovered}) => {
+
+
   return (
-    <div className="cardBox">
-    <div className='material' style={backgroundImg ? {backgroundImage: backgroundImg} : {background: background}}></div>
+    <div className="cardBox"
+      onMouseEnter={() => setIsHovered(true)} 
+      onMouseLeave={() => setIsHovered(false)}
+    >
+    <div className='material' style={backgroundImg ? {backgroundImage: `url(${backgroundImg})`} : {background: background}}></div>
       <div className="material-header">
         <h4>{name}</h4>
       </div>
-      <div className="description">{descr}</div>
-      {/* <button className='btn'>Подробнее</button> */}
+      {isHovered && <div className="description">{descr}</div>}
       <ButtonWithBorder>Подробнее</ButtonWithBorder>
     </div>
   );

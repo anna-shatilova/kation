@@ -14,14 +14,14 @@ $colorOfMainHeader: #ffffff;
   margin-top: 20px;
   border: 1px $shadeBorder solid;
   border-radius: 2px;
-  transition: all 0.3s;
+  // transition: all 0.3s;
   padding-bottom: 10px;
 }
 
-.cardBox:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 5px #ccc;
-}
+// .cardBox:hover {
+//   transform: scale(1.05);
+//   box-shadow: 0 0 5px #ccc;
+// }
 
 .material {
   background-size: cover;

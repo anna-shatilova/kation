@@ -1,9 +1,11 @@
-
+import { useState } from 'react';
 import { ServiceCard } from '../serviceCard/serviceCard';
 import 'animate.css/animate.min.css';
 import './serviceList.css';
 
 export const ServiceList = ({ heading, array }) => {
+
+  const [isHovered, setIsHovered] = useState(false);
 
   const renderServiceCards = () => {
     return array.map((card, index) => (
@@ -13,6 +15,8 @@ export const ServiceList = ({ heading, array }) => {
         backgroundImg={card.url ? `url(${card.url})` : ''}
         name={card.name}
         descr={card.descr ? card.descr : ''}
+        isHovered={isHovered}
+        setIsHovered={setIsHovered}
       />
     ));
   };

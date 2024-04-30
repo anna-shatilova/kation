@@ -15,16 +15,7 @@
   margin-top: 20px;
   border: 1px #0b191a solid;
   border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   padding-bottom: 10px;
-}
-
-.cardBox:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-box-shadow: 0 0 5px #ccc;
-          box-shadow: 0 0 5px #ccc;
 }
 
 .material {
