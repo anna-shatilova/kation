@@ -6,18 +6,24 @@ import './serviceList.css';
 export const ServiceList = ({ heading, array }) => {
 
   const [hoveredCards, setHoveredCards] = useState(Array(array.length).fill(false));
+  const [activeCard, setActiveCard] = useState(null);
 
   const handleCardHover = (index, isHovered) => {
-    const updatedHoveredCards = [...hoveredCards];
-    updatedHoveredCards[index] = isHovered;
-    setHoveredCards(updatedHoveredCards);
+    // const updatedHoveredCards = [...hoveredCards];
+    // updatedHoveredCards[index] = isHovered;
+    // setHoveredCards(updatedHoveredCards);
+    if (isHovered) {
+      setActiveCard(index);
+    } else {
+      setActiveCard(null);
+    }
   };
   
   const renderServiceCards = () => {
     return array.map((card, index) => (
       <ServiceCard
         key={index}
-        isHovered={hoveredCards[index]}
+        isHovered={activeCard === index} 
         onCardHover={(isHovered) => handleCardHover(index, isHovered)}
         background={card.color}
         backgroundImg={card.url ? `url(${card.url})` : ''}

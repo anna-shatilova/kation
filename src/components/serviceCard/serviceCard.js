@@ -6,7 +6,9 @@ import './serviceCard.css';
 export const ServiceCard = ({ background, backgroundImg, name, descr, isHovered, onCardHover}) => {
 
   return (
-    <div className="cardBox"
+    <div 
+      // className={`cardBox ${isHovered ? 'active' : ''}`}
+      className='cardBox'
       onMouseEnter={() => onCardHover(true)}
       onMouseLeave={() => onCardHover(false)}
       style={{ height: isHovered ? 'auto' : '300px' }}
