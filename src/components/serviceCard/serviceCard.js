@@ -1,15 +1,15 @@
 
-import { useState } from 'react';
+
 import { ButtonWithBorder } from '../../App.styles';
 import './serviceCard.css';
 
-export const ServiceCard = ({ background, backgroundImg, name, descr, isHovered, setIsHovered}) => {
-
+export const ServiceCard = ({ background, backgroundImg, name, descr, isHovered, onCardHover}) => {
 
   return (
     <div className="cardBox"
-      onMouseEnter={() => setIsHovered(true)} 
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => onCardHover(true)}
+      onMouseLeave={() => onCardHover(false)}
+      style={{ height: isHovered ? 'auto' : '300px' }}
     >
     <div className='material' style={backgroundImg ? {backgroundImage: `url(${backgroundImg})`} : {background: background}}></div>
       <div className="material-header">
