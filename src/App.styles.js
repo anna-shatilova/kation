@@ -77,6 +77,9 @@ export const ButtonBlue = styled.button`
   cursor: pointer;
 
   transition: all 0.3s ease-out;
+  padding: 10px 15px;
+  border-radius: 2px;
+  font-weight: bold;
 
   &:hover {
     background-color: #8eafaf;

@@ -1,5 +1,6 @@
 import sample from './../../videoplayback/IMG_1209.MP4';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
+import { ButtonBlue } from '../../App.styles';
 import './slider.css'
 
 
@@ -17,7 +18,8 @@ import './slider.css'
                 ОТ 49 РУБ ЗА ДМ2</h1>
                 <p>Нанесем покрытие. Проведем шлифовку, наплавку, полировку и гарцовку. Проконсультируем бесплатно.</p>
                 {/* <a>Заказать консультацию {arrow}</a> */}
-                <a>Заказать консультацию <TrendingFlatIcon style={{fontSize: 'Small'}}/></a>
+                {/* <a>Заказать консультацию <TrendingFlatIcon style={{fontSize: 'Small'}}/></a> */}
+                <ButtonBlue>Заказать консультацию</ButtonBlue>
               </div>
           </div>
     )
