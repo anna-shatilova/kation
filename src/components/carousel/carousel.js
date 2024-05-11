@@ -78,7 +78,7 @@ export const Carousel = ({images}) => {
   {images.map((_, index) => (
     <div
       key={index}
-      className={`dot ${currentIndex === index ? "active" : ""}`}
+      className={`dot ${currentIndex === index ? "activ" : ""}`}
       onClick={() => handleDotClick(index)}
     ></div>
   ))}

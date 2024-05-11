@@ -1,24 +1,18 @@
 
-
 import { ButtonWithBorder } from '../../App.styles';
 import './serviceCard.css';
 
-export const ServiceCard = ({ background, backgroundImg, name, descr, isHovered, onCardHover}) => {
+export const ServiceCard = ({ background, backgroundImg, name, descr}) => {
 
   return (
-    <div 
-      // className={`cardBox ${isHovered ? 'active' : ''}`}
-      className='cardBox'
-      onMouseEnter={() => onCardHover(true)}
-      onMouseLeave={() => onCardHover(false)}
-      style={{ height: isHovered ? 'auto' : '300px' }}
-    >
-    <div className='material' style={backgroundImg ? {backgroundImage: `url(${backgroundImg})`} : {background: background}}></div>
-      <div className="material-header">
-        <h4>{name}</h4>
-      </div>
-      {isHovered && <div className="description">{descr}</div>}
-      <ButtonWithBorder>Подробнее</ButtonWithBorder>
-    </div>
-  );
+  <div className="card" style={backgroundImg ? {backgroundImage: `url(${backgroundImg})`} : {background: background}}>
+  <div className="card-content">
+    <h2 className="card-title">{name}</h2>
+    <p className="card-body">
+      {descr}
+    </p>
+  <ButtonWithBorder>Подробнее</ButtonWithBorder>
+  </div>
+</div>
+  )
 };
