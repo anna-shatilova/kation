@@ -25,6 +25,8 @@ body {
   -moz-osx-font-smoothing: grayscale;  
 //   width: 100%;
 //   height: 100%;
+  padding-right: 0;
+  overflow-x: hidden;
 }
 
 input,

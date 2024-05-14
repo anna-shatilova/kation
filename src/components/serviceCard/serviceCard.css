@@ -12,20 +12,18 @@
 }
 
 body {
-  display: -ms-grid;
-  display: grid;
   min-height: 100vh;
   place-items: center;
   line-height: 1.6;
   background: var(--clr-neutral-900);
   font-family: sans-serif;
-  padding-right: 15em;
+  padding-right: 0;
 }
 
 .card {
   color: var(--clr-neutral-100);
   background-size: cover;
-  padding: 10rem 0 0;
+  padding: 7rem 0 0;
   max-width: 35ch;
   border-radius: 0.5rem;
   overflow: hidden;
