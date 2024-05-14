@@ -3,9 +3,9 @@
 }
 
 .main-content {
-  margin-top: 800px;
   padding-left: calc(50% - 400px);
   padding-right: calc(50% - 400px);
+  padding-bottom: 200px;
 }
 
 .items {
