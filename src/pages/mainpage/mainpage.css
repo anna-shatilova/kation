@@ -85,7 +85,7 @@
 .gallery {
   padding-left: calc(50% - 400px);
   padding-right: calc(50% - 400px);
-  height: 500px;
+  min-height: 600px;
 }
 
 h1 {

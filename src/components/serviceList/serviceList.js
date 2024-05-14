@@ -6,15 +6,19 @@ import './serviceList.css';
 export const ServiceList = ({ heading, array }) => {
   
   const renderServiceCards = () => {
-    return array.map((card, index) => (
-      <ServiceCard
+    return array.map((card, index) => {
+      // console.log(card.url);
+      return (
+        <ServiceCard
         key={index}
         background={card.color}
         backgroundImg={card.url ? `url(${card.url})` : ''}
         name={card.name}
         descr={card.descr ? card.descr : ''}
       />
-    ));
+    )
+    }
+);
   };
 
   return (

@@ -1,4 +1,4 @@
-
+// import { useEffect } from 'react';
 import { Slider } from '../../components/slider/slider';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
@@ -13,6 +13,10 @@ import { Services } from '../../utilities/serivice';
 import {images} from '../../utilities/carouselImg'
 
 export const Mainpage = () => {
+
+  // useEffect(() => {
+  //   console.log(Services);
+  // }, [])
 
   const renderPros = () => {
     return (
