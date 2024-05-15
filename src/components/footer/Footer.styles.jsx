@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-export const Footer = styled.footer`
-  margin-top: 40px;
-`;
+export const Footer = styled.footer``;
 
 export const FooterContent = styled.div`
   display: flex;
