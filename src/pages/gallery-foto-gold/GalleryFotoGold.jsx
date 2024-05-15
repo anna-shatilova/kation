@@ -33,10 +33,6 @@ const itemData = [
     title: 'foto6',
   },
   {
-    img: '/img/gallery/slide20.jpg',
-    title: 'foto7',
-  },
-  {
     img: '/img/gallery/slide23.jpg',
     title: 'foto8',
   },
@@ -45,14 +41,19 @@ const itemData = [
 export const GalleryFotoGold = () => {
   return (
     <Container sx={{ mt: 2 }}>
-      <Breadcrumbs separator="›" aria-label="breadcrumb" sx={{ mb: 2 }}>
-        <Link underline="hover" color="inherit" href="/">
+      <Breadcrumbs
+        separator="›"
+        aria-label="breadcrumb"
+        color="#ffffff"
+        sx={{ mb: 2 }}
+      >
+        <Link underline="hover" color="#ffffff" href="/">
           Главная
         </Link>
-        <Link underline="hover" color="inherit" href="/">
+        <Link underline="hover" color="#ffffff" href="/">
           Галерея
         </Link>
-        <Typography color="inherit">Фото работ по золочению</Typography>
+        <Typography color="#ffffff">Фото работ по золочению</Typography>
       </Breadcrumbs>
       <Typography variant="h2" color="inherit" sx={{ mb: 2 }}>
         Фото работ по золочению
