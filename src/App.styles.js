@@ -25,6 +25,8 @@ body {
   -moz-osx-font-smoothing: grayscale;  
 //   width: 100%;
 //   height: 100%;
+  /* padding-right: 0;
+  overflow-x: hidden; */
 }
 
 input,
@@ -77,6 +79,9 @@ export const ButtonBlue = styled.button`
   cursor: pointer;
 
   transition: all 0.3s ease-out;
+  padding: 10px 15px;
+  border-radius: 2px;
+  font-weight: bold;
 
   &:hover {
     background-color: #8eafaf;

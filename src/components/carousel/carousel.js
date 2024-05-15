@@ -1,154 +1,88 @@
-import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import MobileStepper from '@mui/material/MobileStepper';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-// import SwipeableViews from 'react-swipeable-views';
-// import { autoPlay } from 'react-swipeable-views-utils';
-// import { makeStyles } from '@material-ui/styles';
-
-// const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import './carousel.css'
 
 
-const images = [
-  {
-    label: 'Никелирование',
-    imgPath:
-      'https://ekb.hrom-prom.ru//wp-content/uploads/sites/5/2016/02/%D0%9D%D0%B8%D0%BA%D0%B5%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5.jpg',
-  },
-  {
-    label: 'Хромирование',
-    imgPath:
-      'https://prom-met.ru/images/Main/hrm.jpg',
-  },
-  {
-    label: 'Золочение',
-    imgPath:
-      'https://avatars.dzeninfra.ru/get-zen_doc/1668923/pub_5cadff77ee4f6d00b268e7f7_5cadff8f06ced300b29048f6/scale_1200'
-  },
-  {
-    label: 'Оловянирование',
-    imgPath:
-      'https://www.elhim-doc.ru/images/olov2.jpg'
-  },
-];
+export const Carousel = ({images}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-// const useStyles = makeStyles(() => ({
-//     root: {
-//       maxWidth: 1000,
-//       flexGrow: 1
-//     },
-//     dot: {
-//       '&.MuiMobileStepper-dot': {
-//         backgroundColor: '#899D9D',
-//       },
-//       '&.MuiMobileStepper-dotActive': {
-//         backgroundColor: '#2C3531',
-//       }
-//     }
-//   }));
 
-export const Carousel = () => {
+  useEffect(()=> {
+    const interval = setInterval(() => {
+      setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
+    }, 10000);
+    return () => clearInterval(interval);
+ }, [images.length])
 
-// const classes = useStyles();
-  const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = images.length;
+  const imageVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 3 } },
+  };
 
   const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 1 === images.length ? 0 : prevIndex + 1
+    );
   };
 
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  const handlePrevious = () => {
+
+    setCurrentIndex((prevIndex) =>
+      prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
+    );
   };
 
-  const handleStepChange = (step) => {
-    setActiveStep(step);
+  const handleDotClick = (index) => {
+    setCurrentIndex(index);
   };
 
   return (
-    <Box sx={{ maxWidth: 1000, flexGrow: 1 }}>
-      <Paper
-        square
-        elevation={0}
-        style={{color: "#116466"}}
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          height: 40,
-          pl: 2,
-          bgcolor: '#FFFFFF',
-        }}
+    <div>
+    <div className="carousel-images">
+    <AnimatePresence>
+        <motion.img
+          key={images[currentIndex]}
+          src={images[currentIndex]}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          variants={imageVariants}
+          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+        />
+      </AnimatePresence>
+    <div className="slide_direction">
+    <div className="left" onClick={handlePrevious}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="20"
+        viewBox="0 96 960 960"
+        width="20"
       >
-        <Typography>{images[activeStep].label}</Typography>
-      </Paper>
-      {/* <AutoPlaySwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-        index={activeStep}
-        onChangeIndex={handleStepChange}
-        enableMouseEvents
+        <path d="M400 976 0 576l400-400 56 57-343 343 343 343-56 57Z" />
+      </svg>
+    </div>
+    <div className="right" onClick={handleNext}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="20"
+        viewBox="0 96 960 960"
+        width="20"
       >
-        {images.map((step, index) => (
-          <div key={step.label}>
-            {Math.abs(activeStep - index) <= 2 ? (
-              <Box
-                component="img"
-                sx={{
-                  height: 500,
-                  display: 'block',
-                  maxWidth: 1000,
-                  overflow: 'hidden',
-                  width: '100%',
-                }}
-                src={step.imgPath}
-                alt={step.label}
-              />
-            ) : null}
-          </div>
-        ))}
-      </AutoPlaySwipeableViews> */}
-      <MobileStepper
-        // style={{fill: "#116466"}}
-        // className={classes.root} 
-        variant="dots"
-        steps={maxSteps}
-        position="static"
-        activeStep={activeStep}
-        // classes={{
-        //     root: classes.root,
-        //     dot: classes.dot,
-        //     dotActive: classes.dotActive
-        //   }}
-        nextButton={
-          <Button
-            size="small"
-            style={{color: "#116466"}}
-            onClick={handleNext}
-            disabled={activeStep === maxSteps - 1}
-          >
-            {theme.direction === 'rtl' ? (
-              <KeyboardArrowLeft/>
-            ) : (
-              <KeyboardArrowRight />
-            )}
-          </Button>
-        }
-        backButton={
-          <Button size="small" style={{color: "#116466"}} onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === 'rtl' ? (
-              <KeyboardArrowRight />
-            ) : (
-              <KeyboardArrowLeft />
-            )}
-          </Button>
-        }
-      />
-    </Box>
-  );
-}
+        <path d="m304 974-56-57 343-343-343-343 56-57 400 400-400 400Z" />
+      </svg>
+    </div>
+  </div>
 
+</div>
+  <div className="carousel-indicator">
+  {images.map((_, index) => (
+    <div
+      key={index}
+      className={`dot ${currentIndex === index ? "activ" : ""}`}
+      onClick={() => handleDotClick(index)}
+    ></div>
+  ))}
+</div>
+</div>
+  )
+}
