@@ -1,6 +1,7 @@
 $colorOfMainHeader: #ffffff;
 $background: #2c3531;
 $primaryWindowColor: #afeeee;
+$colorOfSilver: #899D9D;
 
 .container {
   position: absolute;
@@ -38,11 +39,15 @@ $primaryWindowColor: #afeeee;
   height: 100%;
   margin: 0;
   box-sizing: border-box;
-  padding: 20% 32px;
+  // padding: 20% 32px;
   line-height: 1.5;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   :last-child {
-    margin-bottom: 0;
+    margin-bottom: 0px;
   }
 
   h1 {
