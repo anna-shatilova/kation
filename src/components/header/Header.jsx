@@ -16,7 +16,7 @@ export const Header = () => {
           Главная
         </Link>
         <Link
-          to="/"
+          to="#"
           className="nav__link"
           onMouseOver={() => setIsPopupMenuOpen(true)}
           onMouseLeave={() => setIsPopupMenuOpen(false)}
@@ -30,7 +30,7 @@ export const Header = () => {
         <Link to="/gallery" className="nav__link">
           Галерея
         </Link>
-        <Link to="/" className="nav__link">
+        <Link to="/contacts" className="nav__link">
           Контакты
         </Link>
         <Link to="/" className="nav__link">
