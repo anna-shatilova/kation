@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ButtonWithBorder, Container } from '../../App.styles';
 
 export const ContainerGallery = styled(Container)`
-  max-width: 1600px;
+  max-width: 1440px;
 `;
 
 export const CardContainer = styled.div`
@@ -11,6 +11,22 @@ export const CardContainer = styled.div`
   gap: 15px;
   justify-content: center;
   padding-top: 20px;
+
+  @media screen and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(3, 255px);
+  }
+
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 255px);
+  }
+
+  @media screen and (max-width: 767px) {
+    display: grid;
+    grid-template-columns: repeat(1, 255px);
+  }
+
 `;
 
 export const Card = styled.div`
@@ -21,6 +37,7 @@ export const Card = styled.div`
   &:hover {
     transform: scale(1.05);
   }
+  
 `;
 
 export const CardImg = styled.div`

@@ -2,8 +2,12 @@ import { Breadcrumbs, Link, Typography } from '@mui/material';
 import { serviceGallery } from '../../utilities/serviceGallery';
 import { WrapBlue } from '../../App.styles';
 import * as S from './Gallery.styles';
+import { Navigate } from 'react-router-dom';
 
 export const Gallery = () => {
+  const handleOpenService = ()=> {
+Navigate
+  }
   return (
     <WrapBlue>
       <S.ContainerGallery>
@@ -22,7 +26,7 @@ export const Gallery = () => {
               </S.CardImg>
               <S.CardContent>
                 <S.CardTitle>{elem.name}</S.CardTitle>
-                <S.Button>Подробнее</S.Button>
+                <S.Button onClick={handleOpenService}>Подробнее</S.Button>
               </S.CardContent>
             </S.Card>
           ))}
