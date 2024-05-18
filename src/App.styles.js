@@ -61,8 +61,9 @@ export const Container = styled.div`
 `;
 
 export const WrapBlue = styled.div`
-  max-width: 1208px;
-  margin: 0 auto;
+  // max-width: 1208px;
+  width: 100%;
+  // margin: 0 auto;
   padding: 4px 10px 30px;
   background-color: #899d9d;
 `;
@@ -113,4 +114,3 @@ export const ButtonWithBorder = styled(ButtonBlue)`
 // $onFocusColor: #699596;
 // $onHoverColor: #8EAFAF;
 // $shadeBorder: #0B191A;
-
