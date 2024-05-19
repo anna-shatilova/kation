@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
-export const Footer = styled.footer``;
+export const Footer = styled.footer`
+border-top: 1px solid #fff;
+`;
 
 export const FooterContent = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #2c3531;
   padding-top: 32px;
-  border-top: 1px solid #fff;
 `;
 
 export const FooterLogo = styled.img`

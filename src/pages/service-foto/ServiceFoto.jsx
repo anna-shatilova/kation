@@ -1,11 +1,14 @@
 import {
   Breadcrumbs,
-  Container,
-  ImageList,
+  // ImageList,
   ImageListItem,
   Link,
   Typography,
 } from '@mui/material';
+import * as S from './ServiceFoto.styles';
+import { Container, TitleH1 } from '../../App.styles';
+
+// import { useParams } from 'react-router-dom';
 
 const itemData = [
   {
@@ -38,27 +41,27 @@ const itemData = [
   },
 ];
 
-export const GalleryFotoGold = () => {
+export const ServiceFoto = () => {
+  // const params = useParams
+
   return (
-    <Container sx={{ mt: 2 }}>
+    <Container>
       <Breadcrumbs
         separator="›"
         aria-label="breadcrumb"
         color="#ffffff"
-        sx={{ mb: 2 }}
+        sx={{ mt: 2 }}
       >
         <Link underline="hover" color="#ffffff" href="/">
           Главная
         </Link>
-        <Link underline="hover" color="#ffffff" href="/">
+        <Link underline="hover" color="#ffffff" href="/gallery">
           Галерея
         </Link>
         <Typography color="#ffffff">Фото работ по золочению</Typography>
       </Breadcrumbs>
-      <Typography variant="h2" color="inherit" sx={{ mb: 2 }}>
-        Фото работ по золочению
-      </Typography>
-      <ImageList sx={{ height: 450 }} cols={4} gap={20}>
+      <TitleH1>Фото работ по золочению</TitleH1>
+      <S.FotoContainer>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
             <img
@@ -69,7 +72,7 @@ export const GalleryFotoGold = () => {
             />
           </ImageListItem>
         ))}
-      </ImageList>
+      </S.FotoContainer>
     </Container>
   );
 };
