@@ -1,13 +1,12 @@
 import { Breadcrumbs, Link, Typography } from '@mui/material';
 import { serviceGallery } from '../../utilities/serviceGallery';
-import { WrapBlue } from '../../App.styles';
+import { TitleH1, WrapBlue } from '../../App.styles';
 import * as S from './Gallery.styles';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const Gallery = () => {
-  const handleOpenService = ()=> {
-Navigate
-  }
+  const navigate = useNavigate();
+
   return (
     <WrapBlue>
       <S.ContainerGallery>
@@ -17,16 +16,19 @@ Navigate
           </Link>
           <Typography color="inherit">Галерея</Typography>
         </Breadcrumbs>
-        <h1>Галерея</h1>
+        <TitleH1>Галерея</TitleH1>
         <S.CardContainer>
           {serviceGallery.map((elem) => (
-            <S.Card key={elem.id}>
+            <S.Card
+              key={elem.id}
+              onClick={() => navigate(`/service-foto/${elem.id}`)}
+            >
               <S.CardImg>
                 <img src={elem.url} alt="picture" />
               </S.CardImg>
               <S.CardContent>
                 <S.CardTitle>{elem.name}</S.CardTitle>
-                <S.Button onClick={handleOpenService}>Подробнее</S.Button>
+                <S.Button>Подробнее</S.Button>
               </S.CardContent>
             </S.Card>
           ))}

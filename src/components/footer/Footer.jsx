@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import * as S from './Footer.styles';
-import { ButtonBlue } from '../../App.styles';
+import { ButtonBlue, Container } from '../../App.styles';
 
 export const Footer = () => {
   return (
     <S.Footer>
-      <S.FooterContent>
+      <Container>
+        <S.FooterContent>
           <Link to="/">
             <S.FooterLogo src="/img/logo.svg" alt="logo" />
           </Link>
@@ -26,8 +27,9 @@ export const Footer = () => {
             </S.FooterList>
           </S.FooterMenu>
           <ButtonBlue>Заказать консультацию</ButtonBlue>
-      </S.FooterContent>
-      <S.FooterText>© ООО Катион, 2024</S.FooterText>
+        </S.FooterContent>
+        <S.FooterText>© ООО Катион, 2024</S.FooterText>
+      </Container>
     </S.Footer>
   );
 };

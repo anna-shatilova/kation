@@ -56,19 +56,17 @@ export const WrapGreen = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
+  padding: 4px 30px 30px;
 `;
 
 export const WrapBlue = styled.div`
-  // max-width: 1208px;
   width: 100%;
-  // margin: 0 auto;
-  padding: 4px 10px 30px;
   background-color: #899d9d;
 `;
 
-// Переиспользуемые компоненты кнопок
+// Переиспользуемые компоненты
 
 export const ButtonBlue = styled.button`
   color: #2c3531;
@@ -85,8 +83,8 @@ export const ButtonBlue = styled.button`
   font-weight: bold;
 
   &:hover {
-    background-color: #8eafaf;
-    border: 2px #8eafaf solid;
+    background-color: #437c7e;
+    border: 2px #437c7e solid;
   }
 `;
 
@@ -97,9 +95,13 @@ export const ButtonWithBorder = styled(ButtonBlue)`
   background-color: #2c3531;
 
   &:hover {
-    color: #8eafaf;
+    color: #437c7e;
     background-color: #2c3531;
   }
+`;
+
+export const TitleH1 = styled.h1`
+  margin: 40px 0;
 `;
 
 // Переменные, которые были в CSS

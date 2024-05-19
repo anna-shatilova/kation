@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { ButtonWithBorder, Container } from '../../App.styles';
 
 export const ContainerGallery = styled(Container)`
-  max-width: 1440px;
 `;
 
 export const CardContainer = styled.div`
@@ -22,7 +21,7 @@ export const CardContainer = styled.div`
     grid-template-columns: repeat(2, 255px);
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 425px) {
     display: grid;
     grid-template-columns: repeat(1, 255px);
   }

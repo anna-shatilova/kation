@@ -2,20 +2,20 @@ import { AppRoutes } from './routes/Routes';
 import { Header } from './components/header/Header';
 import { Mainpage } from './pages/mainpage/mainpage';
 import { Footer } from './components/footer/Footer';
-import { Container, GlobalStyles, WrapGreen } from './App.styles';
+import { GlobalStyles, WrapGreen } from './App.styles';
 
 function App() {
   return (
     <>
       <GlobalStyles />
       <WrapGreen>
-        <Container>
+        {/* <Container> */}
           <Header />
           <AppRoutes>
             <Mainpage />
           </AppRoutes>
           <Footer />
-        </Container>
+        {/* </Container> */}
       </WrapGreen>
     </>
   );

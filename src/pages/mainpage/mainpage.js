@@ -11,6 +11,7 @@ import { Carousel } from '../../components/carousel/carousel';
 import './mainpage.css';
 import { Services } from '../../utilities/serivice';
 import {images} from '../../utilities/carouselImg'
+import { TitleH1 } from '../../App.styles';
 
 export const Mainpage = () => {
 
@@ -90,14 +91,14 @@ export const Mainpage = () => {
       <div className="wrapper">
       <Slider />
         <div className="main-content">
-          <h1 className="head">ПРЕИМУЩЕСТВА</h1>
+          <TitleH1 className="head">ПРЕИМУЩЕСТВА</TitleH1>
           <div>
             {renderAnimatedPros()}
           </div>
         </div>
         <ServiceList heading={'УСЛУГИ'} array={Services} />
          <div className="gallery">
-           <h1>ГАЛЕРЕЯ</h1>
+           <TitleH1>ГАЛЕРЕЯ</TitleH1>
            <div className='AnimationOnScrollRight'>
              <Carousel images={images} />
              </div>
