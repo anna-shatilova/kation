@@ -36,6 +36,9 @@ export const Header = () => {
         <Link to="/" className="nav__link">
           Информация для технолога
         </Link>
+        <Link to="/about" className="nav__link">
+          О нас
+        </Link>
       </nav>
       <svg
         className="header__search"

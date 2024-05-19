@@ -4,6 +4,7 @@ import { NotFound } from '../pages/NotFound/NotFound';
 import { Gallery } from '../pages/gallery/Gallery';
 import { Contacts } from '../pages/contacts/Contacts';
 import { ServiceFoto } from '../pages/service-foto/ServiceFoto';
+import { AboutPage } from '../pages/about/About';
 
 export const AppRoutes = () => {
   return (
@@ -13,6 +14,7 @@ export const AppRoutes = () => {
       <Route path="/contacts" element={<Contacts />} />
       <Route path="/service-foto/:id" element={<ServiceFoto />} />
       {/* <Route path="/service-info/:id" element={<ServiceInfo />} /> */}
+      <Route path="/about" element={<AboutPage />} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>
