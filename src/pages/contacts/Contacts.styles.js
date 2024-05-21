@@ -1,19 +1,7 @@
 import styled from 'styled-components';
+import { TitleH1 } from '../../App.styles';
 
-export const Contacts = styled.div`
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
-  color: #fff;
-
-  & h2 {
-    margin-top: 50px;
-  }
-`;
-
-export const ContactsTitle = styled.h1`
-  margin-bottom: 40px;
-`;
+export const ContactsTitle = styled(TitleH1)``;
 
 export const ContactItems = styled.div`
   display: flex;
@@ -48,16 +36,16 @@ export const ContactItem = styled.div`
 `;
 
 export const ContactsHeading = styled.h2`
-  margin-bottom: 15px;
+  margin: 25px 0 10px;
 `;
 
 export const ContactsText = styled.p`
   font-weight: 600;
   margin-bottom: 10px;
+`;
 
-  &:last-of-type {
-    color: #ffcb9a;
-  }
+export const ContactsTextSpec = styled(ContactsText)`
+  color: #ffcb9a;
 `;
 
 export const ContactsMapContainer = styled.div`
@@ -70,4 +58,10 @@ export const ContactsMapContainer = styled.div`
   & img {
     width: 100%;
   }
+`;
+
+export const ContactsTextSpan = styled.span`
+  font-weight: 600;
+  font-size: 22px;
+  margin: 10px 0 20px;
 `;
