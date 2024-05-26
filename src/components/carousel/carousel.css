@@ -12,8 +12,12 @@
 }
 
 .slide_direction {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .left,
@@ -28,6 +32,7 @@
   height: 25px;
   width: 25px;
 }
+
 .left svg,
 .right svg {
   cursor: pointer;
@@ -42,8 +47,12 @@
 }
 
 .carousel-indicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 5px;
   padding-top: 3px;
 }
@@ -58,4 +67,5 @@
 
 .activ {
   background-color: #437c7e;
-}/*# sourceMappingURL=carousel.css.map */
+}
+/*# sourceMappingURL=carousel.css.map */

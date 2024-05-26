@@ -6,7 +6,7 @@ export const Services = [
         url: 'https://mosprommetall.ru/upload/iblock/560/560a4c412f406f07044b47486013daff.jpg'
     },
     {
-        name: 'Золото-Кобальт(сплав)',
+        name: 'Золото-Кобальт (сплав)',
         descr: "Технологический процесс и методика покрытия декоративных изделий",
         color: 'radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%)',
         url: 'https://www.zepter.ru/api/img/600,fit/https://www.zepter.ru/api/images/ru/_.png_1648047220'
@@ -72,7 +72,7 @@ export const Services = [
         url: 'https://cdn.shopify.com/s/files/1/0188/6660/2048/files/Preparing_Plate_08_480x480.jpg?v=1684849106'
     },
     {
-        name: 'Осаждение металов',
+        name: 'Осаждение металлов',
         descr: "Технологический процесс и методика покрытия декоративных изделий",
         color: '#C3CDE6',
         url: 'https://www.novafabrication.com/wp-content/uploads/2023/06/Elektrogalvaniz-kp.webp'
