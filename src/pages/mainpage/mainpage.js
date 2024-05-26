@@ -1,4 +1,4 @@
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Slider } from '../../components/slider/slider';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
@@ -10,13 +10,14 @@ import { ServiceList } from '../../components/serviceList/serviceList';
 import { Carousel } from '../../components/carousel/carousel';
 import './mainpage.css';
 import { Services } from '../../utilities/serivice';
-import {images} from '../../utilities/carouselImg'
+import {images} from '../../utilities/carouselImg';
+import { fetchData } from '../../utilities/API';
 
 export const Mainpage = () => {
 
-  // useEffect(() => {
-  //   console.log(Services);
-  // }, [])
+  useEffect(() => {
+    fetchData();
+  }, [])
 
   const renderPros = () => {
     return (
