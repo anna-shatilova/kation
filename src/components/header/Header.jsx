@@ -1,23 +1,22 @@
 import { Link } from 'react-router-dom';
-import './styles/header.css';
 import { PopupNavMenu } from '../popup-nav-menu/PopupNavMenu';
 import { useState } from 'react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import * as S from './Header.styles';
 
 export const Header = () => {
   const [isPopupMenuOpen, setIsPopupMenuOpen] = useState(false);
   const [isHoverOnPopup, setIsHoverOnPopup] = useState(false);
 
   return (
-    <header className="header">
-      <img className="logo header__logo" src="/img/logo.svg" alt="logo" />
-      <nav className="header__nav nav">
-        <Link to="/" className="nav__link">
-          Главная
-        </Link>
+    <S.Header>
+      <Link to="/">
+        <S.HeaderLogo src="/img/logo.svg" alt="logo" />
+      </Link>
+      <S.NavMenu>
+        <Link to="/">Главная</Link>
         <Link
-          to="#"
-          className="nav__link"
+          to="/"
           onMouseOver={() => setIsPopupMenuOpen(true)}
           onMouseLeave={() => setIsPopupMenuOpen(false)}
         >
@@ -27,21 +26,12 @@ export const Header = () => {
         {(isPopupMenuOpen || isHoverOnPopup) && (
           <PopupNavMenu setIsHoverOnPopup={setIsHoverOnPopup} />
         )}
-        <Link to="/gallery" className="nav__link">
-          Галерея
-        </Link>
-        <Link to="/contacts" className="nav__link">
-          Контакты
-        </Link>
-        <Link to="/" className="nav__link">
-          Информация для технолога
-        </Link>
-        <Link to="/about" className="nav__link">
-          О нас
-        </Link>
-      </nav>
+        <Link to="/gallery">Галерея</Link>
+        <Link to="/contacts">Контакты</Link>
+        <Link to="/">Информация для технолога</Link>
+        <Link to="/about">О нас</Link>
+      </S.NavMenu>
       <svg
-        className="header__search"
         width="24"
         height="24"
         viewBox="0 0 24 24"
@@ -63,6 +53,6 @@ export const Header = () => {
           strokeLinejoin="round"
         />
       </svg>
-    </header>
+    </S.Header>
   );
 };

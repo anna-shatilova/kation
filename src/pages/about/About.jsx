@@ -1,8 +1,9 @@
+import { Container } from '../../App.styles';
 import * as S from './About.styles';
 
 export const AboutPage = () => {
   return (
-    <S.AboutContainer>
+    <Container>
       <S.AboutTitle>О нас</S.AboutTitle>
       <S.AboutTextDiv>
         <p>
@@ -53,6 +54,6 @@ export const AboutPage = () => {
           </li>
         </S.AboutList>
       </S.AboutTextDiv>
-    </S.AboutContainer>
+    </Container>
   );
 };

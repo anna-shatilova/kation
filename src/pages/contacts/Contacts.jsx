@@ -1,8 +1,9 @@
-import * as S from './styles/Contacts.styles';
+import { Container } from '../../App.styles';
+import * as S from './Contacts.styles';
 
 export const Contacts = () => {
   return (
-    <S.Contacts>
+    <Container>
       <S.ContactsTitle>Контакты ООО &quot;Катион&quot;</S.ContactsTitle>
       <S.ContactItems>
         <S.ContactItem>
@@ -19,21 +20,26 @@ export const Contacts = () => {
         <S.ContactItem>
           <img src="/img/map.svg" alt="" />
           <h3>Наш адрес:</h3>
-          <p>г.Москва, ул.Шоссе Энтузиастов, д.31, м.Шоссе Энтузиастов</p>
+          <p>
+            г. Москва, ул. Шоссе Энтузиастов, &nbsp;д. 31, м. Шоссе Энтузиастов
+          </p>
         </S.ContactItem>
       </S.ContactItems>
       <S.ContactsHeading>Время работы:&nbsp; 10:00 - 20:00</S.ContactsHeading>
       <S.ContactsText>Часы посещения: 11:00 - 18:00</S.ContactsText>
-      <S.ContactsText>С собой необходимо взять паспорт</S.ContactsText>
+      <S.ContactsTextSpec>С собой необходимо взять паспорт</S.ContactsTextSpec>
       <S.ContactsHeading>Как нас найти</S.ContactsHeading>
       <S.ContactsMapContainer>
-        <img src="/img/Kation-checkpoint.jpg" alt="проходная" />
+        <S.ContactsTextSpan>Пешком:</S.ContactsTextSpan>
+        <img src="/img/from_metro.jpg" alt="от метро" />
+        <S.ContactsTextSpan>На машине:</S.ContactsTextSpan>
+        <img src="/img/by_auto.jpg" alt="на машине" />
         <iframe
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3Af84eb81f4280687663e80788c8a2865662303154b3e12e5aa86d1c649d124622&amp;source=constructor"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A9d380d2517cebce728ccdfa7e9b1d942467bf52cca676b251e426a775c54ed56&amp;source=constructor"
           width="100%"
           height="400"
         ></iframe>
       </S.ContactsMapContainer>
-    </S.Contacts>
+    </Container>
   );
 };

@@ -1,15 +1,16 @@
-$onActiveColor: #437c7e;
+import styled from 'styled-components';
+import { onActiveColor } from '../header/Header.styles';
 
-.popup-menu {
+export const PopupMenu = styled.div`
   display: block;
   min-width: 200px;
-  max-height: 80vh;
+  max-height: 450px;
   background-color: #d1e8e2;
   position: absolute;
   top: 27px;
   left: 110px;
   overflow-y: scroll;
-  z-index: 1;
+  z-index: 100;
 
   &::-webkit-scrollbar {
     width: 6px;
@@ -20,11 +21,11 @@ $onActiveColor: #437c7e;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $onActiveColor;
+    background-color: ${onActiveColor};
   }
-}
+`;
 
-.menu-list {
+export const PopupMenuList = styled.ul`
   padding: 10px 20px;
 
   & li {
@@ -39,8 +40,8 @@ $onActiveColor: #437c7e;
 
     & a:hover,
     a:active {
-      color: $onActiveColor;
+      color: ${onActiveColor};
       text-decoration: underline;
     }
   }
-}
+`;

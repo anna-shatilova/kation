@@ -1,15 +1,7 @@
 import styled from 'styled-components';
+import { TitleH1 } from '../../App.styles';
 
-export const AboutContainer = styled.div`
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
-  color: #fff;
-`;
-
-export const AboutTitle = styled.h1`
-  margin-bottom: 40px;
-`;
+export const AboutTitle = styled(TitleH1)``;
 
 export const AboutTextDiv = styled.div`
   max-width: 1200px;

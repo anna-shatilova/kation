@@ -1,48 +1,48 @@
-$background: #2c3531;
-$colorOfMainHeader: #ffffff;
-$primaryWindowColor: #afeeee;
-$onActiveColor: #437c7e;
+import styled from 'styled-components';
 
-.header {
+const colorOfMainHeader = '#ffffff';
+const primaryWindowColor = '#afeeee';
+export const onActiveColor = '#437c7e';
+
+export const Header = styled.header`
   width: 100%;
   height: 60px;
-  background-color: $background;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #fff;
 
-  &__search {
+  & svg {
     margin-right: 10px;
     cursor: pointer;
   }
-}
+`;
 
-.logo {
+export const HeaderLogo = styled.img`
   cursor: pointer;
-}
+`;
 
-.nav {
+export const NavMenu = styled.nav`
   display: flex;
-  gap: 64px;
+  gap: 44px;
   position: relative;
 
-  &__link {
-    color: $colorOfMainHeader;
+  & a {
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
+    color: ${colorOfMainHeader};
 
     &:hover {
-      color: $primaryWindowColor;
+      color: ${primaryWindowColor};
     }
 
     &:active {
-      color: $onActiveColor;
+      color: ${onActiveColor};
     }
 
     &:nth-child(2) {
       display: flex;
     }
   }
-}
+`;

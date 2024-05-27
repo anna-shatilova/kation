@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom';
-import './styles/popupNavMenu.css';
+import * as S from './PopupNavMenu.styles';
 
 export const PopupNavMenu = ({ setIsHoverOnPopup }) => {
   return (
-    <div
-      className="popup-menu"
+    <S.PopupMenu
       onMouseOver={() => setIsHoverOnPopup(true)}
       onMouseLeave={() => setIsHoverOnPopup(false)}
     >
-      <ul className="menu-list">
+      <S.PopupMenuList>
         <li>
           <Link to="/">Золочение</Link>
         </li>
@@ -66,7 +65,7 @@ export const PopupNavMenu = ({ setIsHoverOnPopup }) => {
         <li>
           <Link to="#">ОБРАБОТКА ПЕСКОСТРУЙКОЙ</Link>
         </li>
-      </ul>
-    </div>
+      </S.PopupMenuList>
+    </S.PopupMenu>
   );
 };
