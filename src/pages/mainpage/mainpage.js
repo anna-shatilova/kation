@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Slider } from '../../components/slider/slider';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
@@ -9,15 +9,28 @@ import 'animate.css/animate.min.css';
 import { ServiceList } from '../../components/serviceList/serviceList';
 import { Carousel } from '../../components/carousel/carousel';
 import './mainpage.css';
-import { Services } from '../../utilities/serivice';
+// import { Services } from '../../utilities/serivice';
 import {images} from '../../utilities/carouselImg';
 import { fetchData } from '../../utilities/API';
 
 export const Mainpage = () => {
 
+  const [serviceArr, setServiceArr] = useState([]);
+
+  const Servic = 'Services';
+  const carouselImg = 'carouselImg';
+  const serviceGallery = 'serviceGallery';
+
   useEffect(() => {
-    fetchData();
+    fetchData({table: Servic})
+      .then((res) => {
+        setServiceArr(res)
+      })
   }, [])
+
+  useEffect(() => {
+    console.log(serviceArr);
+  }, [serviceArr])
 
   const renderPros = () => {
     return (
@@ -96,7 +109,7 @@ export const Mainpage = () => {
             {renderAnimatedPros()}
           </div>
         </div>
-        <ServiceList heading={'УСЛУГИ'} array={Services} />
+        <ServiceList heading={'УСЛУГИ'} array={serviceArr} />
          <div className="gallery">
            <h1>ГАЛЕРЕЯ</h1>
            <div className='AnimationOnScrollRight'>
