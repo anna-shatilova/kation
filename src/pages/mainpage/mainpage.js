@@ -10,12 +10,14 @@ import { ServiceList } from '../../components/serviceList/serviceList';
 import { Carousel } from '../../components/carousel/carousel';
 import './mainpage.css';
 // import { Services } from '../../utilities/serivice';
-import {images} from '../../utilities/carouselImg';
+// import {images} from '../../utilities/carouselImg';
 import { fetchData } from '../../utilities/API';
 
 export const Mainpage = () => {
 
   const [serviceArr, setServiceArr] = useState([]);
+  const [carouselImgArr, setCarouselImgArr] = useState([]);
+  const [serviceGalleryArr, setServiceGalleryArr] = useState([]);
 
   const Servic = 'Services';
   const carouselImg = 'carouselImg';
@@ -26,11 +28,31 @@ export const Mainpage = () => {
       .then((res) => {
         setServiceArr(res)
       })
+      fetchData({table: carouselImg})
+      .then((res) => {
+        if (typeof res === 'string') {
+          const urls = res.split(',').map(url => url.trim());
+          
+          const cleanedUrls = urls.map(url => {
+            return url.replace(/[''[\]]/g, '');
+          });
+          
+          setCarouselImgArr(cleanedUrls);
+          // console.log('Cleaned Image URLs array', cleanedUrls);
+        } else {
+          // console.log('Received data is not a string:', res);
+        }
+      })
+      fetchData({table: serviceGallery})
+      .then((res) => {
+        setServiceGalleryArr(res) //картинки для галереи. Пропсами закинуть в галерею
+      })
+    
   }, [])
 
-  useEffect(() => {
-    console.log(serviceArr);
-  }, [serviceArr])
+  // useEffect(() => {
+  //   console.log(serviceArr);
+  // }, [serviceArr])
 
   const renderPros = () => {
     return (
@@ -113,7 +135,7 @@ export const Mainpage = () => {
          <div className="gallery">
            <h1>ГАЛЕРЕЯ</h1>
            <div className='AnimationOnScrollRight'>
-             <Carousel images={images} />
+             <Carousel images={carouselImgArr} />
              </div>
          </div>
       </div>
