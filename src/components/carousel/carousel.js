@@ -6,7 +6,6 @@ import './carousel.css'
 export const Carousel = ({images}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-
   useEffect(()=> {
     const interval = setInterval(() => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);

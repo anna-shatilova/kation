@@ -16,10 +16,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .overlay-elements {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#899D9D), to(#2c3531));
   background-image: linear-gradient(to bottom right, #899D9D, #2c3531);
   opacity: 0.83;
   position: absolute;
@@ -29,29 +31,43 @@
   width: 100%;
   height: 100%;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   line-height: 1.5;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .overlay-elements :last-child {
   margin-bottom: 0px;
 }
+
 .overlay-elements h1 {
   font-size: 32pt;
   font-weight: bold;
   text-shadow: 0 0 0.3em #2c3531;
   opacity: 1;
 }
+
 .overlay-elements p {
   font-size: 16pt;
   text-shadow: 0 0 0.3em #2c3531;
   margin: 1em 0;
   opacity: 1;
 }
+
 .overlay-elements a {
   font-size: 16px;
   line-height: 19px;
@@ -68,4 +84,5 @@ code {
 body {
   background: #2c3531;
   color: #ffffff;
-}/*# sourceMappingURL=slider.css.map */
+}
+/*# sourceMappingURL=slider.css.map */
